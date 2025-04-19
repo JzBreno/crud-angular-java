@@ -1,0 +1,27 @@
+<mat-card appearance="outlined">
+  <mat-toolbar color="primary" class="titulo">
+      <h1> Cursos Disponíveis </h1>
+  </mat-toolbar>
+<div *ngIf="courses$ | async as courses; else loading">
+  <table mat-table [dataSource]="courses" class="mat-elevation-z8">
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> <h2>Nome</h2> </th>
+      <td mat-cell *matCellDef="let course"> {{course.nome}}
+    </ng-container>
+
+    <ng-container matColumnDef="categoria">
+      <th mat-header-cell *matHeaderCellDef><h2>Categoria</h2> </th>
+      <td mat-cell *matCellDef="let course"> {{course.categoria}}
+        <mat-icon aria-hidden="false" aria-label="Categoria do Curso">{{course.categoria | category}}</mat-icon>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+  <ng-template #loading>
+    <div class="load-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-template>
+</mat-card>

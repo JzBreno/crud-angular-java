@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "1",
+    "nome": "Angular",
+    "categoria": "Java_script"
+  },
+  {
+    "_id": "2",
+    "nome": "React",
+    "categoria": "Java_script"
+  },
+  {
+    "_id": "3",
+    "nome": "Vue.js",
+    "categoria": "Java_script"
+  },
+  {
+    "_id": "4",
+    "nome": "Node.js",
+    "categoria": "Java_script"
+  },
+  {
+    "_id": "5",
+    "nome": "Express",
+    "categoria": "Java_script"
+  },
+  {
+    "_id": "6",
+    "nome": "Django",
+    "categoria": "Python"
+  },
+  {
+    "_id": "7",
+    "nome": "Flask",
+    "categoria": "Python"
+  },
+  {
+    "_id": "8",
+    "nome": "Spring Boot",
+    "categoria": "Java"
+  },
+  {
+    "_id": "9",
+    "nome": "Hibernate",
+    "categoria": "Java"
+  },
+  {
+    "_id": "10",
+    "nome": "Laravel",
+    "categoria": "PHP"
+  },
+  {
+    "_id": "11",
+    "nome": "Symfony",
+    "categoria": "PHP"
+  },
+  {
+    "_id": "12",
+    "nome": "Ruby on Rails",
+    "categoria": "Ruby"
+  },
+  {
+    "_id": "13",
+    "nome": "Sinatra",
+    "categoria": "Ruby"
+  },
+  {
+    "_id": "14",
+    "nome": "ASP.NET",
+    "categoria": "C#"
+  },
+  {
+    "_id": "15",
+    "nome": "Entity Framework",
+    "categoria": "C#"
+  }
+]

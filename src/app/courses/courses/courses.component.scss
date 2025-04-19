@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+}
+.titulo{
+  display: flex;
+  justify-content: center;
+}
+
+.load-spinner{
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(0,0,0,0.015);
+}
+
+.dialog-teste{
+  display: flex;
+}
+
