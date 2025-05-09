@@ -5,6 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 // pipes sao usados pra testes unitarios
 export class CategoryPipe implements PipeTransform {
+  //
+  // map = {
+  //   java: 'coffee',
+  //   python: 'code',
+  //   java_script: 'code',
+  //   php: 'terminal',
+  //   ruby: 'diamond',
+  //   csharp: 'developer_mode'
+  // };
 
   transform(value: any): string {
     switch ((value || '').toLowerCase()) {

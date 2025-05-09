@@ -5,6 +5,7 @@ import {Observable, of} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import {ErrorDialogComponent} from '../../shared/components/error-dialog/error-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -15,14 +16,14 @@ export class CoursesComponent implements OnInit {
   // declarando o objeto de CurseService para usar a função que retorna nossos valores
   // coursesService: CursesService;
   courses$: Observable<Course[]>;
-  displayedColumns = ['nome', 'categoria'];
+  displayedColumns = ['nome', 'categoria','acoes'];
   // outras formas de popular variaveis abaixo com subscribe
   coursesSubscribe: Course[] = [];
   // declarando diretamente no contrutor o http que sera usado em services
 
 
   constructor(private coursesService: CursesService,
-              public dialog: MatDialog) {
+              public dialog: MatDialog, private router: Router) {
     // this.coursesService = new CursesService();
     // atribuindo a nossa variavel os valores que organizamos para seres enviados pelo CursesService
     this.courses$ = this.coursesService.retornaListaDeCursos()
@@ -36,6 +37,7 @@ export class CoursesComponent implements OnInit {
     this.coursesService.retornaListaDeCursos().subscribe(courses => this.coursesSubscribe = courses);
   }
 
+
   onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
       data: errorMsg, // Ajuste o tamanho do diálogo
@@ -47,5 +49,7 @@ export class CoursesComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  onAdd() {
+    this.router.navigate(['new']).then(r => 'courses/new');
+  }
 }

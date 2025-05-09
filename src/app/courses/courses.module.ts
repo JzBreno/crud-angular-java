@@ -9,11 +9,13 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {SharedModule} from '../shared/shared.module';
 import {AppMaterialModule} from '../shared/app-material/app-material.module';
 import {MatIconModule} from '@angular/material/icon';
+import {FormsModule} from '@angular/forms';
+import { CourseFormComponent } from './courses/course-form/course-form.component';
 
 @NgModule({
-  declarations: [CoursesComponent],
+  declarations: [CoursesComponent, CourseFormComponent],
   exports: [
-    CoursesComponent
+    CoursesComponent, CourseFormComponent
   ],
   imports: [MatProgressSpinnerModule,
     MatToolbarModule,
@@ -23,7 +25,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatTableModule,
     SharedModule,
     AppMaterialModule,
-    MatIconModule
+    MatIconModule, FormsModule
   ]
 })
 export class CoursesModule { }

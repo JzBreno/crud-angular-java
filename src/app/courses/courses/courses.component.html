@@ -15,6 +15,26 @@
         <mat-icon aria-hidden="false" aria-label="Categoria do Curso">{{course.categoria | category}}</mat-icon>
       </td>
     </ng-container>
+
+<!--    adicionado a nossa coluna de acoes onde iremos adicionar, editar e apagar cursos-->
+    <ng-container matColumnDef="acoes">
+<!--      adicionado o headercell-->
+     <mat-header-cell *matHeaderCellDef>
+<!--       adicionando o botao de adicionar para o cabecalho -->
+       <button class="mat-mini-fab" color="primary" aria-label="Adicionar Curso">
+         <mat-icon (click)="onAdd()" >add</mat-icon>
+       </button>
+     </mat-header-cell>
+      <mat-cell *matCellDef="let course">
+        <!--       adicionando o botao de adicionar para o cabecalho -->
+        <button class="mat-icon-button" color="primary" aria-label="Editar Curso">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button>
+          <mat-icon class="mat-icon-button" color="warn" aria-label="Remover Curso">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
